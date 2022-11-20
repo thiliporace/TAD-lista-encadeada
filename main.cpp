@@ -50,15 +50,15 @@ int main()
   PrintListInfo(lista);
   Node* temp = RemoveNode(lista, 3);
   cout << "Nó removido: " << temp->data << '\n';
-  delete[] temp;
+  delete temp;
   PrintListInfo(lista);
   temp = RemoveHead(lista);
   cout << "Nó removido: " << temp->data << '\n';
-  delete[] temp;
+  delete temp;
   PrintListInfo(lista);
   temp = RemoveTail(lista);
   cout << "Nó removido: " << temp->data << '\n';
-  delete[] temp;
+  delete temp;
   PrintListInfo(lista);
   temp = GetHead(lista);
   cout << "Primeiro elemento da lista: " << temp -> data << "\n";
@@ -67,6 +67,6 @@ int main()
   temp = GetNode(lista, 3);
   if (temp == nullptr) cout << "Nao ha nodo com este valor." << "\n";
   else cout << "Nodo com o valor 3: " << temp -> data << "\n";
-  delete[] temp;
+  delete temp;
   cout << "Fim.\n";
 }

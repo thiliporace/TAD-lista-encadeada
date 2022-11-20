@@ -32,11 +32,11 @@ Node *RemoveHead(Linked_list *lista);
 
 Node *RemoveNode(Linked_list *lista, int value);
 
-Node *GetNode(Linked_list *lista, int value);
+Node *GetNode(const Linked_list *lista, int value);
 
-Node *GetHead(Linked_list *lista);
+Node *GetHead(const Linked_list *lista);
 
-int Count(Linked_list *lista);
+int Count(const Linked_list *lista);
 
-Node *GetTail(Linked_list *lista);
+Node *GetTail(const Linked_list *lista);
 

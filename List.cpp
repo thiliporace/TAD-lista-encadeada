@@ -36,7 +36,7 @@ void Clear(Linked_list *lista){
   Node *next = nullptr;
   while (nodo != nullptr){
     next = nodo -> next;
-    delete[] nodo;
+    delete nodo;
     nodo = next;
   }
   lista -> head = lista -> tail = nullptr;
@@ -45,7 +45,7 @@ void Clear(Linked_list *lista){
 
 void Destroy(Linked_list *lista){
   Clear(lista);
-  delete[] lista;
+  delete lista;
 }
 
 Node *RemoveHead(Linked_list *lista){
@@ -94,9 +94,10 @@ Node *RemoveNode(Linked_list *lista, int value){
     toRemove -> next = nullptr;
     return toRemove;
   }
+  delete toRemove;
 }
 
-Node *GetNode(Linked_list *lista, int value){
+Node *GetNode(const Linked_list *lista, int value){
   Node* nodo = new Node;
   nodo = lista -> head;
   while (nodo != nullptr){
@@ -106,14 +107,14 @@ Node *GetNode(Linked_list *lista, int value){
   return nodo = nullptr;
 }
 
-Node *GetHead(Linked_list *lista){
+Node *GetHead(const Linked_list *lista){
   return lista -> head;
 }
 
-int Count(Linked_list *lista){ 
+int Count(const Linked_list *lista){ 
   return lista -> count;
 }
 
-Node *GetTail(Linked_list *lista){ 
+Node *GetTail(const Linked_list *lista){ 
   return lista -> tail;
 }
